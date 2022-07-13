@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import User from '../layouts/User';
 import Script from 'next/script';
+import User from '@/layouts/User';
 
 const Home = () => {
     return (
@@ -4385,8 +4385,8 @@ const Home = () => {
             </section>
             {/* <!-- ====== Contact End ====== --> */}
 
-            <Script src='../../public/assets/js/wow.min.js' />
-            <Script src='../../public/assets/js/index.js' />
+            <Script src='assets/js/index.js'  strategy="afterInteractive"/>
+
         </>
     );
 };

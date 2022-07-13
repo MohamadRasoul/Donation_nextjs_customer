@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import { useAuth } from '@/hooks/auth';
 
 const Navbar = () => {
+    const { user, logout } = useAuth();
+
     return (
         <div className='absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header'>
             <div className='container'>
@@ -35,46 +38,45 @@ const Navbar = () => {
                             >
                                 <ul className='blcok lg:flex'>
                                     <li className='relative group'>
-                                        <a
-                                            href='#home'
-                                            className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
-                                        >
-                                            Home
-                                        </a>
+                                        <Link href={`/`}>
+                                            <a
+                                                href='#home'
+                                                className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
+                                            >
+                                                Home
+                                            </a>
+                                        </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <a
-                                            href='#about'
-                                            className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
-                                        >
-                                            About
-                                        </a>
+                                        <Link href={`/news`}>
+                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
+                                                News
+                                            </a>
+                                        </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <a
-                                            href='#pricing'
-                                            className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
-                                        >
-                                            Pricing
-                                        </a>
+                                        <Link href={`/cases`}>
+                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
+                                                Cases
+                                            </a>
+                                        </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <a
-                                            href='#team'
-                                            className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
-                                        >
-                                            Team
-                                        </a>
+                                        <Link href={`/sponsorShips`}>
+                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
+                                                SponsorShips
+                                            </a>
+                                        </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <a
-                                            href='#contact'
-                                            className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
-                                        >
-                                            Contact
-                                        </a>
+                                        <Link href={`/campaigns`}>
+                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
+                                                Campaigns
+                                            </a>
+                                        </Link>
                                     </li>
-                                    <li className='relative submenu-item group'>
+
+                                    {/* <li className='relative submenu-item group'>
                                         <a
                                             href='javascript:void(0)'
                                             className='relative mx-8 flex py-2 text-base text-dark after:absolute after:right-1 after:top-1/2 after:mt-[-2px] after:h-2 after:w-2 after:-translate-y-1/2 after:rotate-45 after:border-b-2 after:border-r-2 after:border-current group-hover:text-primary lg:mr-0 lg:ml-8 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:after:right-0 lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
@@ -131,22 +133,33 @@ const Navbar = () => {
                                                 404 Page
                                             </a>
                                         </div>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </nav>
                         </div>
-                        <div className='justify-end hidden pr-16 sm:flex lg:pr-0'>
-                            <Link href={`/signin`}>
-                                <a className='py-3 text-base font-medium text-white loginBtn px-7 hover:opacity-70'>
-                                    Sign In
+                        {user ? (
+                            <div className='justify-end hidden pr-16 sm:flex lg:pr-0'>
+                                <a
+                                    onClick={(e) => logout(e)}
+                                    className='py-3 text-base font-medium text-white cursor-pointer loginBtn px-7 hover:opacity-70'
+                                >
+                                    Log Out
                                 </a>
-                            </Link>
-                            <Link href={`/signup`}>
-                                <a className='px-6 py-3 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-lg signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark'>
-                                    Sign Up
-                                </a>
-                            </Link>
-                        </div>
+                            </div>
+                        ) : (
+                            <div className='justify-end hidden pr-16 sm:flex lg:pr-0'>
+                                <Link href={`/signin`}>
+                                    <a className='py-3 text-base font-medium text-white loginBtn px-7 hover:opacity-70'>
+                                        Sign In
+                                    </a>
+                                </Link>
+                                <Link href={`/signup`}>
+                                    <a className='px-6 py-3 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-lg signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark'>
+                                        Sign Up
+                                    </a>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
