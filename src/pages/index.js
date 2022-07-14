@@ -4385,7 +4385,7 @@ const Home = () => {
             </section>
             {/* <!-- ====== Contact End ====== --> */}
 
-            <Script src='assets/js/index.js'  strategy="afterInteractive"/>
+            <Script src='assets/js/index.js'  strategy="beforeInteractive"/>
 
         </>
     );

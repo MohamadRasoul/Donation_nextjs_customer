@@ -23,16 +23,16 @@ module.exports = {
             center: true,
             padding: '16px',
         },
-        colors: {
-            black: '#212b36',
-            dark: '#090E34',
-            'dark-700': '#090e34b3',
-            primary: '#529b02',
-            secondary: '#13c239',
-            'body-color': '#638167',
-            warning: '#FBBF24',
-        },
         extend: {
+            colors: {
+                black: '#212b36',
+                dark: '#090E34',
+                'dark-700': '#090e34b3',
+                primary: '#529b02',
+                secondary: '#13c239',
+                'body-color': '#638167',
+                warning: '#FBBF24',
+            },
             boxShadow: {
                 input: '0px 7px 20px rgba(0, 0, 0, 0.03)',
                 pricing: '0px 39px 23px -27px rgba(0, 0, 0, 0.04)',
@@ -44,5 +44,5 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require('tw-elements/dist/plugin')],
 };
