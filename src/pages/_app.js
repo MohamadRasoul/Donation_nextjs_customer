@@ -39,8 +39,8 @@ const MyApp = ({ Component, pageProps }) => {
                     <Component {...pageProps} />
                 </Layout>
             </SWRConfig>
-            <Script src='assets/js/wow.min.js' strategy='beforeInteractive' />
-            <Script src='assets/js/main.js' strategy='afterInteractive' />
+            <Script src='/assets/js/wow.min.js' strategy='beforeInteractive' />
+            <Script src='/assets/js/main.js' strategy='afterInteractive' />
         </>
     );
 };

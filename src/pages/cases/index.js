@@ -37,9 +37,9 @@ const Cases = () => {
             {/* <!-- ====== Banner Section End --> */}
 
             {/* <!-- ====== Blog Section Start --> */}
-            <section class='pt-20 pb-10 lg:pt-[120px] lg:pb-20'>
-                <div class='container'>
-                    <div class='-mx-4 flex flex-wrap'>
+            <section className='pt-20 pb-10 lg:pt-[120px] lg:pb-20'>
+                <div className='container'>
+                    <div className='-mx-4 flex flex-wrap'>
                         <Spinner
                             loading={loading}
                             isEmpty={!donationPosts.length}

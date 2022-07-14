@@ -149,12 +149,12 @@ const Navbar = () => {
                         ) : (
                             <div className='justify-end hidden pr-16 sm:flex lg:pr-0'>
                                 <Link href={`/signin`}>
-                                    <a className='py-3 text-base font-medium text-white loginBtn px-7 hover:opacity-70'>
+                                    <a className='py-3 text-base font-medium text-white loginBtn px-7 hover:text-white hover:opacity-70'>
                                         Sign In
                                     </a>
                                 </Link>
                                 <Link href={`/signup`}>
-                                    <a className='px-6 py-3 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-lg signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark'>
+                                    <a className='px-6 py-3 text-base font-medium text-white duration-300 ease-in-out bg-white rounded-lg signUpBtn bg-opacity-20 hover:bg-opacity-100 hover:text-dark focus:text-gray-50'>
                                         Sign Up
                                     </a>
                                 </Link>
