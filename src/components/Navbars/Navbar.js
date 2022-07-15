@@ -15,7 +15,7 @@ const Navbar = () => {
                                 className='block w-full py-5 navbar-logo'
                             >
                                 <img
-                                    src='assets/images/logo/logo-white.svg'
+                                    src='/assets/images/logo/logo-white.svg'
                                     alt='logo'
                                     className='w-full header-logo'
                                 />
@@ -55,21 +55,21 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/cases`}>
+                                        <Link href={`/donationPost/cases`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 Cases
                                             </a>
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/sponsorShips`}>
+                                        <Link href={`/donationPost/sponsorShips`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 SponsorShips
                                             </a>
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/campaigns`}>
+                                        <Link href={`/donationPost/campaigns`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 Campaigns
                                             </a>

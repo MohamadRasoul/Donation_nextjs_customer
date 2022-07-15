@@ -69,7 +69,7 @@ const Home = () => {
                                     data-wow-delay='.3s'
                                 >
                                     <img
-                                        src='assets/images/hero/brand.svg'
+                                        src='/assets/images/hero/brand.svg'
                                         alt='image'
                                         className='mx-auto w-full max-w-[250px] opacity-50 transition duration-300 ease-in-out hover:opacity-100'
                                     />
@@ -84,7 +84,7 @@ const Home = () => {
                             >
                                 <div className='mt-16'>
                                     <img
-                                        src='assets/images/hero/hero-image.jpg'
+                                        src='/assets/images/hero/hero-image.jpg'
                                         alt='hero'
                                         className='max-w-full mx-auto rounded-t-xl rounded-tr-xl'
                                     />
@@ -1456,7 +1456,7 @@ const Home = () => {
                                     <div className='text-center'>
                                         <div className='relative z-10 inline-block'>
                                             <img
-                                                src='assets/images/about/about-image.svg'
+                                                src='/assets/images/about/about-image.svg'
                                                 alt='image'
                                                 className='mx-auto lg:ml-auto'
                                             />
@@ -2022,7 +2022,7 @@ const Home = () => {
                                 <div className='flex items-center ud-testimonial-info'>
                                     <div className='ud-testimonial-image mr-5 h-[50px] w-[50px] overflow-hidden rounded-full'>
                                         <img
-                                            src='assets/images/testimonials/author-01.png'
+                                            src='/assets/images/testimonials/author-01.png'
                                             alt='author'
                                         />
                                     </div>
@@ -2105,7 +2105,7 @@ const Home = () => {
                                 <div className='flex items-center ud-testimonial-info'>
                                     <div className='ud-testimonial-image mr-5 h-[50px] w-[50px] overflow-hidden rounded-full'>
                                         <img
-                                            src='assets/images/testimonials/author-02.png'
+                                            src='/assets/images/testimonials/author-02.png'
                                             alt='author'
                                         />
                                     </div>
@@ -2188,7 +2188,7 @@ const Home = () => {
                                 <div className='flex items-center ud-testimonial-info'>
                                     <div className='ud-testimonial-image mr-5 h-[50px] w-[50px] overflow-hidden rounded-full'>
                                         <img
-                                            src='assets/images/testimonials/author-03.png'
+                                            src='/assets/images/testimonials/author-03.png'
                                             alt='author'
                                         />
                                     </div>
@@ -2221,7 +2221,7 @@ const Home = () => {
                                             rel='nofollow noopner'
                                         >
                                             <img
-                                                src='assets/images/brands/tailgrids.svg'
+                                                src='/assets/images/brands/tailgrids.svg'
                                                 alt='tailgrids'
                                                 className='duration-300 grayscale hover:filter-none'
                                             />
@@ -2234,7 +2234,7 @@ const Home = () => {
                                             rel='nofollow noopner'
                                         >
                                             <img
-                                                src='assets/images/brands/ayroui.svg'
+                                                src='/assets/images/brands/ayroui.svg'
                                                 alt='ayroui'
                                                 className='duration-300 grayscale hover:filter-none'
                                             />
@@ -2247,7 +2247,7 @@ const Home = () => {
                                             rel='nofollow noopner'
                                         >
                                             <img
-                                                src='assets/images/brands/uideck.svg'
+                                                src='/assets/images/brands/uideck.svg'
                                                 alt='uideck'
                                                 className='duration-300 grayscale hover:filter-none'
                                             />
@@ -2260,7 +2260,7 @@ const Home = () => {
                                             rel='nofollow noopner'
                                         >
                                             <img
-                                                src='assets/images/brands/graygrids.svg'
+                                                src='/assets/images/brands/graygrids.svg'
                                                 alt='graygrids'
                                                 className='duration-300 grayscale hover:filter-none'
                                             />
@@ -2273,7 +2273,7 @@ const Home = () => {
                                             rel='nofollow noopner'
                                         >
                                             <img
-                                                src='assets/images/brands/lineicons.svg'
+                                                src='/assets/images/brands/lineicons.svg'
                                                 alt='lineicons'
                                                 className='duration-300 grayscale hover:filter-none'
                                             />
@@ -2316,7 +2316,7 @@ const Home = () => {
                             >
                                 <div className='h-170px] relative z-10 mx-auto mb-6 w-[170px] rounded-full'>
                                     <img
-                                        src='assets/images/team/team-01.png'
+                                        src='/assets/images/team/team-01.png'
                                         alt='image'
                                         className='w-full rounded-full'
                                     />
@@ -2797,7 +2797,7 @@ const Home = () => {
                             >
                                 <div className='h-170px] relative z-10 mx-auto mb-6 w-[170px] rounded-full'>
                                     <img
-                                        src='assets/images/team/team-02.png'
+                                        src='/assets/images/team/team-02.png'
                                         alt='image'
                                         className='w-full rounded-full'
                                     />
@@ -3278,7 +3278,7 @@ const Home = () => {
                             >
                                 <div className='h-170px] relative z-10 mx-auto mb-6 w-[170px] rounded-full'>
                                     <img
-                                        src='assets/images/team/team-03.png'
+                                        src='/assets/images/team/team-03.png'
                                         alt='image'
                                         className='w-full rounded-full'
                                     />
@@ -3759,7 +3759,7 @@ const Home = () => {
                             >
                                 <div className='h-170px] relative z-10 mx-auto mb-6 w-[170px] rounded-full'>
                                     <img
-                                        src='assets/images/team/team-01.png'
+                                        src='/assets/images/team/team-01.png'
                                         alt='image'
                                         className='w-full rounded-full'
                                     />
@@ -4385,7 +4385,7 @@ const Home = () => {
             </section>
             {/* <!-- ====== Contact End ====== --> */}
 
-            {/* <Script src='assets/js/index.js'  strategy="lazyOnload"/> */}
+            {/* <Script src='/assets/js/index.js'  strategy="lazyOnload"/> */}
 
         </>
     );

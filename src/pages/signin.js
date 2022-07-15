@@ -47,7 +47,7 @@ const Signin = () => {
                                         className='mx-auto inline-block max-w-[160px]'
                                     >
                                         <img
-                                            src='assets/images/logo/logo.svg'
+                                            src='/assets/images/logo/logo.svg'
                                             alt='logo'
                                         />
                                     </a>

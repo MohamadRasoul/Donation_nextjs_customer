@@ -45,7 +45,9 @@ const Cases = () => {
                             isEmpty={!donationPosts.length}
                         >
                             {donationPosts.map((donationPost) => (
-                                <DonationPostCard></DonationPostCard>
+                                <DonationPostCard
+                                    donationPost={donationPost}
+                                ></DonationPostCard>
                             ))}
                         </Spinner>
                     </div>
