@@ -6,7 +6,7 @@ const DonationPostCard = ({ donationPost }) => {
     return (
         <>
             <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
-                <div className='wow fadeInUp group mb-10' data-wow-delay='.1s'>
+                <div className='wow fadeInUp group mb-14' data-wow-delay='.1s'>
                     <div className='mb-8 overflow-hidden rounded'>
                         <a href='blog-details.html' className='block'>
                             <img
@@ -48,10 +48,11 @@ const DonationPostCard = ({ donationPost }) => {
                                 </a>
                             </Link>
                         </h3>
-
-                        <p className='text-base text-body-color'>
-                            {donationPost.description}
-                        </p>
+                        <div>
+                            <p className='text-base text-body-color h-24 overflow-hidden'>
+                                {donationPost.description}
+                            </p>
+                        </div>
 
                         <div className='flex justify-start my-5'>
                             {donationPost.status_types.map((statusType) => (

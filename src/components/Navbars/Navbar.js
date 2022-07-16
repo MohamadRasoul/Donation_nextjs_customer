@@ -48,7 +48,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/news`}>
+                                        <Link href={`/donationPost/news`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 News
                                             </a>
@@ -62,7 +62,9 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/donationPost/sponsorShips`}>
+                                        <Link
+                                            href={`/donationPost/sponsorShips`}
+                                        >
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 SponsorShips
                                             </a>

@@ -1,11 +1,14 @@
 import 'rsuite/dist/rsuite.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@/styles/globals.css';
 import '@/styles/animate.css';
 import '@/styles/tailwind.css';
+import 'styles/nprogress.css';
+
+
 import Script from 'next/script';
 import Head from 'next/head';
 import NProgress from 'nprogress';
-import 'styles/nprogress.css';
 import Router from 'next/router';
 import { SWRConfig } from 'swr';
 import axios from '@/lib/axios';
