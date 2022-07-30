@@ -1,6 +1,6 @@
 import User from '@/layouts/User';
 import { Formik, Field, Form } from 'formik';
-import Link from 'next/link';
+import Link from 'next/Link';
 import { useAuth } from '@/hooks/auth';
 import { useState } from 'react';
 

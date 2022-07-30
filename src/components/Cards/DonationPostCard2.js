@@ -2,10 +2,10 @@ import { Divider, Progress } from 'rsuite';
 import Link from 'next/Link';
 import moment from 'moment';
 
-const DonationPostCard = ({ donationPost }) => {
+const DonationPostCard2 = ({ donationPost }) => {
     return (
         <>
-            <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
+            <div className='w-full px-4 md:w-1/2'>
                 <div className='wow fadeInUp group mb-14' data-wow-delay='.1s'>
                     <div className='mb-8 overflow-hidden rounded'>
                         <a href='blog-details.html' className='block'>
@@ -18,22 +18,6 @@ const DonationPostCard = ({ donationPost }) => {
                     </div>
                     <div>
                         <div className='flex flex-wrap items-center justify-between mb-4 space-x-2 text-xs text-gray-400 '>
-                            <div className='flex items-center'>
-                                <a href='#' className='relative block'>
-                                    <img
-                                        alt='charitableFoundation image'
-                                        src={
-                                            donationPost.charitableFoundation_image
-                                        }
-                                        className='object-cover w-10 h-10 mx-auto rounded-full '
-                                    />
-                                </a>
-                                <div className='flex justify-center ml-3 text-base font-semibold text-gray-600 '>
-                                    <p className='text-gray-80'>
-                                        {donationPost.charitableFoundation}
-                                    </p>
-                                </div>
-                            </div>
                             <span>
                                 {moment(donationPost.start_date).format(
                                     'D MMMM YYYY'
@@ -104,4 +88,4 @@ const DonationPostCard = ({ donationPost }) => {
     );
 };
 
-export default DonationPostCard;
+export default DonationPostCard2;

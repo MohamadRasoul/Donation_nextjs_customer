@@ -1,6 +1,22 @@
 import User from '@/layouts/User';
+import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 
 const News = () => {
+    const [news, setNews] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const { data: newsData, newsError } =
+        useSWR('/admin/news/index');
+
+    useEffect(() => {
+        if (newsData) {
+            setNews(
+                newsData.data.news
+            );
+            setLoading(false);
+        }
+    }, [newsData]);
     return (
         <>
             {/* <!-- ====== Banner Section Start --> */}

@@ -2,7 +2,7 @@ import User from '@/layouts/User';
 import { Formik, Field, Form } from 'formik';
 import { useAuth } from '@/hooks/auth';
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from 'next/Link';
 
 const Signup = () => {
     const { user, register } = useAuth();

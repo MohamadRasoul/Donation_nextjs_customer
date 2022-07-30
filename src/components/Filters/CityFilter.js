@@ -24,7 +24,7 @@ const CityFilter = ({ setSelectedCity }) => {
             data={cities}
             labelKey='name'
             valueKey='id'
-            placeholder='city'
+            placeholder='all city'
             label='Filter'
             style={{ width: 224 }}
             onSelect={(value) => setSelectedCity(value)}

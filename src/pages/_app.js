@@ -4,7 +4,7 @@ import '@/styles/globals.css';
 import '@/styles/animate.css';
 import '@/styles/tailwind.css';
 import 'styles/nprogress.css';
-
+// import 'tw-elements';
 
 import Script from 'next/script';
 import Head from 'next/head';

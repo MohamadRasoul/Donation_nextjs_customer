@@ -47,5 +47,8 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [require('tw-elements/dist/plugin')],
+    daisyui: {
+        themes: ['lemonade'],
+    },
+    plugins: [require('daisyui'), require('tw-elements/dist/plugin')],
 };

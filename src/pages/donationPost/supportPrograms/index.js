@@ -3,13 +3,14 @@ import CharitablefoundationFilter from '@/components/Filters/Charitablefoundatio
 import CityFilter from '@/components/Filters/CityFilter';
 import Spinner from '@/components/UI/Spinner';
 import User from '@/layouts/User';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Divider } from 'rsuite';
+import { Divider, SelectPicker } from 'rsuite';
 import useSWR from 'swr';
 
-const Campaigns = () => {
+const SupportPrograms = () => {
     //#region State   ####################################
-    const [donationPosts, setDonationPosts] = useState([]);
+    const [supportPrograms, setSupportPrograms] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const [selectedCharitablefoundation, setSelectedCharitablefoundation] =
@@ -19,20 +20,22 @@ const Campaigns = () => {
     //#endregion
 
     //#region Hook   ####################################
-    const { data: donationPostsData, donationPostsError } = useSWR(
+    
+
+    const { data: supportProgramsData, supportProgramsError } = useSWR(
         selectedCharitablefoundation
-            ? `/admin/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
-            : `/admin/donationPost/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
+            ? `/admin/supportProgram/charitablefoundation/${selectedCharitablefoundation}/index?filter[city_id]=${selectedCity}`
+            : `/admin/supportProgram/index?filter[city_id]=${selectedCity}`
     );
 
     useEffect(() => {
         setLoading(true);
 
-        if (donationPostsData) {
-            setDonationPosts(donationPostsData.data.donationPosts);
+        if (supportProgramsData) {
+            setSupportPrograms(supportProgramsData.data.supportPrograms);
             setLoading(false);
         }
-    }, [donationPostsData]);
+    }, [supportProgramsData]);
     //#endregion
 
     //#region Function   ####################################
@@ -48,7 +51,7 @@ const Campaigns = () => {
                         <div className='w-full px-4'>
                             <div className='text-center'>
                                 <h1 className='text-4xl font-semibold text-white'>
-                                    Campaigns
+                                    SupportPrograms
                                 </h1>
                             </div>
                         </div>
@@ -73,12 +76,12 @@ const Campaigns = () => {
                     <div className='flex flex-wrap -mx-4'>
                         <Spinner
                             loading={loading}
-                            isEmpty={!donationPosts.length}
+                            isEmpty={!supportPrograms.length}
                         >
-                            {donationPosts.map((donationPost) => (
+                            {supportPrograms.map((supportProgram) => (
                                 <DonationPostCard
-                                    key={donationPost.id}
-                                    donationPost={donationPost}
+                                    key={supportProgram.id}
+                                    supportProgram={supportProgram}
                                 ></DonationPostCard>
                             ))}
                         </Spinner>
@@ -91,6 +94,6 @@ const Campaigns = () => {
     //#endregion
 };
 
-export default Campaigns;
+export default SupportPrograms;
 
-Campaigns.layout = User;
+SupportPrograms.layout = User;

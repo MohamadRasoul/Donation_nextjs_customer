@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/Link';
 import { useAuth } from '@/hooks/auth';
 
 const Navbar = () => {
@@ -38,104 +38,56 @@ const Navbar = () => {
                             >
                                 <ul className='blcok lg:flex'>
                                     <li className='relative group'>
-                                        <Link href={`/`}>
-                                            <a
-                                                href='#home'
-                                                className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70'
-                                            >
-                                                Home
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className='relative group'>
-                                        <Link href={`/donationPost/news`}>
+                                        <Link href={`/news`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
                                                 News
                                             </a>
                                         </Link>
                                     </li>
                                     <li className='relative group'>
-                                        <Link href={`/donationPost/cases`}>
+                                        <Link href={`/charitableFoundations`}>
                                             <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
-                                                Cases
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className='relative group'>
-                                        <Link
-                                            href={`/donationPost/sponsorShips`}
-                                        >
-                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
-                                                SponsorShips
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className='relative group'>
-                                        <Link href={`/donationPost/campaigns`}>
-                                            <a className='flex py-2 mx-8 text-base ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'>
-                                                Campaigns
+                                                Charitable Foundation
                                             </a>
                                         </Link>
                                     </li>
 
-                                    {/* <li className='relative submenu-item group'>
+                                    <li className='relative submenu-item group'>
                                         <a
                                             href='javascript:void(0)'
                                             className='relative mx-8 flex py-2 text-base text-dark after:absolute after:right-1 after:top-1/2 after:mt-[-2px] after:h-2 after:w-2 after:-translate-y-1/2 after:rotate-45 after:border-b-2 after:border-r-2 after:border-current group-hover:text-primary lg:mr-0 lg:ml-8 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:after:right-0 lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12'
                                         >
-                                            Pages
+                                            Doantion Posts
                                         </a>
                                         <div className='submenu relative top-full left-0 hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full'>
-                                            <a
-                                                href='about.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
+                                            <Link href={`/donationPost/cases`}>
+                                                <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
+                                                    Cases
+                                                </a>
+                                            </Link>
+                                            <Link
+                                                href={`/donationPost/sponsorShips`}
                                             >
-                                                About Page
-                                            </a>
-                                            <a
-                                                href='pricing.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
+                                                <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
+                                                    SponsorShips
+                                                </a>
+                                            </Link>
+                                            <Link
+                                                href={`/donationPost/campaigns`}
                                             >
-                                                Pricing Page
-                                            </a>
-                                            <a
-                                                href='contact.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
+                                                <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
+                                                    Campaigns
+                                                </a>
+                                            </Link>
+                                            <Link
+                                                href={`/donationPost/supportPrograms`}
                                             >
-                                                Contact Page
-                                            </a>
-                                            <a
-                                                href='blog-grids.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
-                                            >
-                                                Blog Grid Page
-                                            </a>
-                                            <a
-                                                href='blog-details.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
-                                            >
-                                                Blog Details Page
-                                            </a>
-                                            <a
-                                                href='signup.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
-                                            >
-                                                Sign Up Page
-                                            </a>
-                                            <a
-                                                href='signin.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
-                                            >
-                                                Sign In Page
-                                            </a>
-                                            <a
-                                                href='404.html'
-                                                className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'
-                                            >
-                                                404 Page
-                                            </a>
+                                                <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
+                                                    Support Program
+                                                </a>
+                                            </Link>
                                         </div>
-                                    </li> */}
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

@@ -3,11 +3,12 @@ import CharitablefoundationFilter from '@/components/Filters/Charitablefoundatio
 import CityFilter from '@/components/Filters/CityFilter';
 import Spinner from '@/components/UI/Spinner';
 import User from '@/layouts/User';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Divider } from 'rsuite';
 import useSWR from 'swr';
 
-const Campaigns = () => {
+const SponsorShips = () => {
     //#region State   ####################################
     const [donationPosts, setDonationPosts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -19,6 +20,8 @@ const Campaigns = () => {
     //#endregion
 
     //#region Hook   ####################################
+    
+
     const { data: donationPostsData, donationPostsError } = useSWR(
         selectedCharitablefoundation
             ? `/admin/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=2&filter[city_id]=${selectedCity}`
@@ -32,6 +35,7 @@ const Campaigns = () => {
             setDonationPosts(donationPostsData.data.donationPosts);
             setLoading(false);
         }
+        
     }, [donationPostsData]);
     //#endregion
 
@@ -48,7 +52,7 @@ const Campaigns = () => {
                         <div className='w-full px-4'>
                             <div className='text-center'>
                                 <h1 className='text-4xl font-semibold text-white'>
-                                    Campaigns
+                                    SponsorShips
                                 </h1>
                             </div>
                         </div>
@@ -91,6 +95,6 @@ const Campaigns = () => {
     //#endregion
 };
 
-export default Campaigns;
+export default SponsorShips;
 
-Campaigns.layout = User;
+SponsorShips.layout = User;
