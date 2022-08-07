@@ -65,6 +65,9 @@ const Campaigns = () => {
                             setSelectedCharitablefoundation={
                                 setSelectedCharitablefoundation
                             }
+                            selectedCharitablefoundation={
+                                selectedCharitablefoundation
+                            }
                         />
 
                         <CityFilter setSelectedCity={setSelectedCity} />

@@ -1,11 +1,11 @@
-import DonationPostCard from '@/components/Cards/DonationPostCard';
+import SupportProgramCard from '@/components/Cards/SupportProgramCard';
 import CharitablefoundationFilter from '@/components/Filters/CharitablefoundationFilter';
 import CityFilter from '@/components/Filters/CityFilter';
 import Spinner from '@/components/UI/Spinner';
 import User from '@/layouts/User';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Divider, SelectPicker } from 'rsuite';
+import { Divider } from 'rsuite';
 import useSWR from 'swr';
 
 const SupportPrograms = () => {
@@ -20,7 +20,8 @@ const SupportPrograms = () => {
     //#endregion
 
     //#region Hook   ####################################
-    
+    const router = useRouter();
+    const { charitableFoundationId } = router.query;
 
     const { data: supportProgramsData, supportProgramsError } = useSWR(
         selectedCharitablefoundation
@@ -35,7 +36,16 @@ const SupportPrograms = () => {
             setSupportPrograms(supportProgramsData.data.supportPrograms);
             setLoading(false);
         }
+        
     }, [supportProgramsData]);
+
+    useEffect(() => {
+        
+        if (charitableFoundationId && !selectedCharitablefoundation) {
+            setSelectedCharitablefoundation(charitableFoundationId);
+        }
+    }, [charitableFoundationId]);
+
     //#endregion
 
     //#region Function   ####################################
@@ -68,24 +78,28 @@ const SupportPrograms = () => {
                             setSelectedCharitablefoundation={
                                 setSelectedCharitablefoundation
                             }
+                            selectedCharitablefoundation={
+                                selectedCharitablefoundation
+                            }
                         />
 
                         <CityFilter setSelectedCity={setSelectedCity} />
                     </div>
                     <Divider />
-                    <div className='flex flex-wrap -mx-4'>
-                        <Spinner
-                            loading={loading}
-                            isEmpty={!supportPrograms.length}
-                        >
+
+                    <Spinner
+                        loading={loading}
+                        isEmpty={!supportPrograms.length}
+                    >
+                        <div className='grid gap-5 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
                             {supportPrograms.map((supportProgram) => (
-                                <DonationPostCard
+                                <SupportProgramCard
                                     key={supportProgram.id}
                                     supportProgram={supportProgram}
-                                ></DonationPostCard>
+                                ></SupportProgramCard>
                             ))}
-                        </Spinner>
-                    </div>
+                        </div>
+                    </Spinner>
                 </div>
             </section>
             {/* <!-- ====== Blog Section End --> */}

@@ -65,6 +65,9 @@ const Cases = () => {
                             setSelectedCharitablefoundation={
                                 setSelectedCharitablefoundation
                             }
+                            selectedCharitablefoundation={
+                                selectedCharitablefoundation
+                            }
                         />
 
                         <CityFilter setSelectedCity={setSelectedCity} />
