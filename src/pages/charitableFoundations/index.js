@@ -43,13 +43,13 @@ const CharitableFoundations = ({}) => {
                     loading={loading}
                     isEmpty={!charitableFoundations.length}
                 >
-                    <div className='grid w-full gap-6 my-10 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2'>
+                    v<div className='grid w-full grid-cols-1 gap-6 my-10 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1'>
                         {charitableFoundations?.map((charitableFoundation) => (
                             <CharitableFoundationCard
                                 charitableFoundation={charitableFoundation}
                             />
                         ))}
-                    </div>
+                    </div>v
                 </Spinner>
             </div>
             {/* <!-- ====== Blog Section End --> */}

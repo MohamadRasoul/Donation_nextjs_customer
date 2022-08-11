@@ -93,7 +93,7 @@ const DonationPostCard = ({ donationPost }) => {
                         <div className='flex items-center mt-5'>
                             <Link href={`/donationPost/1`}>
                                 <a className='w-full px-5 py-2 text-center rounded-lg bg-primary text-gray-50 hover:text-gray-200 hover:opacity-70 hover:shadow-lg'>
-                                    Donate
+                                    Sponsor
                                 </a>
                             </Link>
                         </div>

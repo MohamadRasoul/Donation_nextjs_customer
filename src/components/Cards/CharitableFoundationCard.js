@@ -23,7 +23,7 @@ const CharitableFoundationCard = ({ charitableFoundation }) => {
                                 />
                             </div>
                         </div>
-                        <h2 className='card-title'>
+                        <h2 className='truncate card-title w-36'>
                             {charitableFoundation.name}
                         </h2>
                     </div>

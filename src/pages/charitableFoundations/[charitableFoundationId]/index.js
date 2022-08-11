@@ -46,6 +46,7 @@ const CharitableFoundation = () => {
             setDonationPosts(donationPostsData.data.donationPosts);
             setLoading(false);
         }
+        
     }, [charitableFoundationData, donationPostsData]);
     //#endregion
 

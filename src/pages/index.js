@@ -21,7 +21,7 @@ const Home = () => {
             >
                 <div className='container'>
                     <div className='flex flex-wrap items-center -mx-4'>
-                        <div className='w-full px-4'>
+                        {/* <div className='w-full px-4'>
                             <div
                                 className='hero-content wow fadeInUp mx-auto max-w-[780px] text-center'
                                 data-wow-delay='.2s'
@@ -75,9 +75,15 @@ const Home = () => {
                                     />
                                 </div>
                             </div>
+                        </div> */}
+                        <div className='w-full px-4 m-24'>
+                            <div className='text-center'>
+                                <h1 className='text-4xl font-semibold text-white'>
+                                    Home
+                                </h1>
+                            </div>
                         </div>
-
-                        <div className='w-full px-4'>
+                        {/* <div className='w-full px-4'>
                             <div
                                 className='wow fadeInUp relative z-10 mx-auto max-w-[845px]'
                                 data-wow-delay='.25s'
@@ -1230,7 +1236,7 @@ const Home = () => {
                                     </svg>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -1415,7 +1421,7 @@ const Home = () => {
             {/* <!-- ====== Features Section End ====== --> */}
 
             {/* <!-- ====== About Section Start ====== --> */}
-            <section
+            {/* <section
                 id='about'
                 className='bg-[#f3f4fe] pt-20 pb-20 lg:pt-[120px] lg:pb-[120px]'
             >
@@ -1467,11 +1473,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <!-- ====== About Section End ====== --> */}
 
             {/* <!-- ====== Pricing Section Start ====== --> */}
-            <section
+            {/* <section
                 id='pricing'
                 className='relative z-20 overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]'
             >
@@ -1632,11 +1638,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <!-- ====== Pricing Section End ====== --> */}
 
             {/* <!-- ====== Faq Section Start ====== --> */}
-            <section className='relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]'>
+            {/* <section className='relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]'>
                 <div className='container'>
                     <div className='flex flex-wrap -mx-4'>
                         <div className='w-full px-4'>
@@ -1929,11 +1935,11 @@ const Home = () => {
                         </defs>
                     </svg>
                 </div>
-            </section>
+            </section> */}
             {/* <!-- ====== Faq Section End ====== --> */}
 
             {/* <!-- ====== Testimonials Start ====== --> */}
-            <section id='testimonials' className='pt-20 md:pt-[120px]'>
+            {/* <section id='testimonials' className='pt-20 md:pt-[120px]'>
                 <div className='container px-4'>
                     <div className='flex flex-wrap'>
                         <div className='w-full mx-4'>
@@ -2284,7 +2290,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <!-- ====== Testimonials End ====== --> */}
 
             {/* <!-- ====== Team Section Start ====== --> */}
