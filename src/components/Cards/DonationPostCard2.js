@@ -38,9 +38,9 @@ const DonationPostCard2 = ({ donationPost }) => {
                             </p>
                         </div>
 
-                        <div className='flex justify-start my-5'>
+                        <div className='flex flex-wrap justify-start my-5'>
                             {donationPost.status_types.map((statusType) => (
-                                <span className='px-2 py-1 mb-2 mr-2 text-xs text-gray-100 rounded-md bg-primary opacity-60 hover:opacity-100 hover:text-white'>
+                                <span className='px-2 py-1 mb-2 mr-2 text-xs text-gray-100 rounded-md whitespace-nowrap bg-primary opacity-60 hover:opacity-100 hover:text-white'>
                                     {statusType.title}
                                 </span>
                             ))}
@@ -51,7 +51,7 @@ const DonationPostCard2 = ({ donationPost }) => {
                                     percent={Math.round(
                                         (donationPost.amount_donated /
                                             donationPost.amount_required) *
-                                            100
+                                        100
                                     )}
                                     strokeColor='#529b02'
                                 />
@@ -75,9 +75,9 @@ const DonationPostCard2 = ({ donationPost }) => {
                             </div>
                         </div>
                         <div className='flex items-center mt-5'>
-                            <Link href={`/donationPost/1`}>
+                            <Link href={`/donationPost/${donationPost.id}?donationPostType=${donationPost.post_type_id}`}>
                                 <a className='w-full px-5 py-2 text-center rounded-lg bg-primary text-gray-50 hover:text-gray-200 hover:opacity-70 hover:shadow-lg'>
-                                    Donate
+                                    {donationPost.post_type_id == 2 ? "Sponsor" : "Donate"}
                                 </a>
                             </Link>
                         </div>

@@ -9,7 +9,7 @@ const CharitableFoundations = ({}) => {
     const [loading, setLoading] = useState(true);
 
     const { data: charitableFoundationsData, charitableFoundationsError } =
-        useSWR('/admin/charitablefoundation/index');
+        useSWR('/user/charitablefoundation/index');
 
     useEffect(() => {
         if (charitableFoundationsData) {

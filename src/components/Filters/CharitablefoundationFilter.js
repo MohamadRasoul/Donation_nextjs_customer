@@ -11,7 +11,7 @@ const CharitablefoundationFilter = ({
     const [charitablefoundations, setCharitablefoundations] = useState([]);
 
     const { data: charitablefoundationsData, charitablefoundationsError } =
-        useSWR('/admin/charitablefoundation/index');
+        useSWR('/user/charitablefoundation/index');
 
     useEffect(() => {
         if (charitablefoundationsData) {

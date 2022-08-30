@@ -54,46 +54,62 @@ const DonationPostCard = ({ donationPost }) => {
                             </p>
                         </div>
 
-                        <div className='flex justify-start my-5'>
+                        <div className='flex flex-wrap justify-start my-5'>
                             {donationPost.status_types.map((statusType) => (
-                                <span className='px-2 py-1 mb-2 mr-2 text-xs text-gray-100 rounded-md bg-primary opacity-60 hover:opacity-100 hover:text-white'>
+                                <span className='px-2 py-1 mb-2 mr-2 text-xs text-gray-100 rounded-md whitespace-nowrap bg-primary opacity-60 hover:opacity-100 hover:text-white'>
                                     {statusType.title}
                                 </span>
                             ))}
                         </div>
                         <div className='flex flex-wrap mt-4 justify-evenly'>
-                            <div className='w-1/6'>
-                                <Progress.Circle
-                                    percent={Math.round(
-                                        (donationPost.amount_donated /
-                                            donationPost.amount_required) *
-                                            100
-                                    )}
-                                    strokeColor='#529b02'
-                                />
-                            </div>
-                            <Divider vertical className='!h-12' />
-                            <div className='flex flex-col items-center'>
-                                <p className='flex text-gray-400'>
-                                    <p className='mr-2 font-semibold text-gray-600'>
-                                        Amount :
-                                    </p>
-                                    ${donationPost.amount_required}
-                                </p>
-                                <p className='flex text-gray-400'>
-                                    <p className='mr-2 font-semibold text-gray-600'>
-                                        Left :
-                                    </p>
-                                    $
-                                    {donationPost.amount_required -
-                                        donationPost.amount_donated}
-                                </p>
-                            </div>
+
+
+                            {donationPost.post_type_id == 2
+                                ?
+                                <div className="flex flex-col items-center justify-center my-4 text-base font-medium text-gray-500">
+                                    <p className="uppercase">MONTHLY SPONSORSHIP AMOUNT</p>
+                                    <p className="text-3xl font-bold"> ${donationPost.amount_required}</p>
+                                </div>
+                                :
+                                <>
+                                    <div className='w-1/6'>
+                                        <Progress.Circle
+                                            percent={Math.round(
+                                                (donationPost.amount_donated /
+                                                    donationPost.amount_required) *
+                                                100
+                                            )}
+                                            strokeColor='#529b02'
+                                        />
+                                    </div>
+                                    <Divider vertical className='!h-12' />
+                                    <div className='flex flex-col items-center'>
+                                        <p className='flex text-gray-400'>
+                                            <p className='mr-2 font-semibold text-gray-600'>
+                                                Amount :
+                                            </p>
+                                            ${donationPost.amount_required}
+                                        </p>
+                                        <p className='flex text-gray-400'>
+                                            <p className='mr-2 font-semibold text-gray-600'>
+                                                Left :
+                                            </p>
+                                            $
+                                            {donationPost.amount_required -
+                                                donationPost.amount_donated}
+                                        </p>
+                                    </div>
+                                </>
+                            }
+
                         </div>
+
+
+
                         <div className='flex items-center mt-5'>
-                            <Link href={`/donationPost/1`}>
+                            <Link href={`/donationPost/${donationPost.id}?donationPostType=${donationPost.post_type_id}`}>
                                 <a className='w-full px-5 py-2 text-center rounded-lg bg-primary text-gray-50 hover:text-gray-200 hover:opacity-70 hover:shadow-lg'>
-                                    Sponsor
+                                    {donationPost.post_type_id == 2 ? "Sponsor" : "Donate"}
                                 </a>
                             </Link>
                         </div>

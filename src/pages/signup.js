@@ -120,7 +120,7 @@ const Signup = () => {
                                             <div className='mb-10'>
                                                 <input
                                                     type='submit'
-                                                    value='Sign In'
+                                                    value='Sign Up'
                                                     className='w-full px-5 py-3 text-base text-white transition duration-300 ease-in-out border rounded-md cursor-pointer bordder-primary bg-primary hover:shadow-md'
                                                 />
                                             </div>

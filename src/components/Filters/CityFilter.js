@@ -6,7 +6,7 @@ const CityFilter = ({ setSelectedCity }) => {
     //#region Hook   ####################################
     const [cities, setCities] = useState([]);
 
-    const { data: citiesData, citiesError } = useSWR('/admin/city/index');
+    const { data: citiesData, citiesError } = useSWR('/user/city/index');
 
     useEffect(() => {
         if (citiesData) {

@@ -11,7 +11,7 @@ const BranchFilter = ({ setSelectedBranch }) => {
     const { charitableFoundationId } = router.query;
 
     const { data: branchesData, branchesError } = useSWR(
-        `/admin/branch/charitablefoundation/${charitableFoundationId}/index`
+        `/user/branch/charitablefoundation/${charitableFoundationId}/index`
     );
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const BranchFilter = ({ setSelectedBranch }) => {
         <SelectPicker
             className='mx-2'
             data={branches}
-            labelKey='city'
+            labelKey='name'
             valueKey='id'
             placeholder='all branch'
             label='Filter'

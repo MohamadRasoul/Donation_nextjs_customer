@@ -25,8 +25,8 @@ const SupportPrograms = () => {
 
     const { data: supportProgramsData, supportProgramsError } = useSWR(
         selectedCharitablefoundation
-            ? `/admin/supportProgram/charitablefoundation/${selectedCharitablefoundation}/index?filter[city_id]=${selectedCity}`
-            : `/admin/supportProgram/index?filter[city_id]=${selectedCity}`
+            ? `/user/supportProgram/charitablefoundation/${selectedCharitablefoundation}/index?filter[city_id]=${selectedCity}`
+            : `/user/supportProgram/index?filter[city_id]=${selectedCity}`
     );
 
     useEffect(() => {

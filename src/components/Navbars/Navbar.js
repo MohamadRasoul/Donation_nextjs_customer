@@ -65,23 +65,17 @@ const Navbar = () => {
                                                     Cases
                                                 </a>
                                             </Link>
-                                            <Link
-                                                href={`/donationPost/sponsorShips`}
-                                            >
+                                            <Link href={`/donationPost/sponsorShips`} >
                                                 <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
                                                     SponsorShips
                                                 </a>
                                             </Link>
-                                            <Link
-                                                href={`/donationPost/campaigns`}
-                                            >
+                                            <Link href={`/donationPost/campaigns`}>
                                                 <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
                                                     Campaigns
                                                 </a>
                                             </Link>
-                                            <Link
-                                                href={`/donationPost/supportPrograms`}
-                                            >
+                                            <Link href={`/donationPost/supportPrograms`}>
                                                 <a className='block rounded py-[10px] px-4 text-sm text-body-color hover:text-primary'>
                                                     Support Program
                                                 </a>

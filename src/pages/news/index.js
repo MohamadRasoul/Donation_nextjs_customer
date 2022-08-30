@@ -15,8 +15,8 @@ const News = () => {
     const { data: newsData, newsError } =
         useSWR(
             selectedCharitablefoundation
-                ? `/admin/news/charitablefoundation/${selectedCharitablefoundation}/index`
-                : '/admin/news/index');
+                ? `/user/news/charitablefoundation/${selectedCharitablefoundation}/index`
+                : '/user/news/index');
 
     useEffect(() => {
         setLoading(true);

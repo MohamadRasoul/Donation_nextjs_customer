@@ -36,7 +36,7 @@ const SupportProgramCard = ({ supportProgram }) => {
                                 />
                             </a>
                             <div className='flex justify-center ml-4 text-md'>
-                                <p className='text-gray-800 '>Jean Jacques</p>
+                                <p className='text-gray-800 '>{supportProgram.instructor}</p>
                             </div>
                         </div>
                         <p className='font-medium text-gray-400 text-md'>

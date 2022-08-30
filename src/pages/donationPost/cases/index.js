@@ -21,8 +21,8 @@ const Cases = () => {
     //#region Hook   ####################################
     const { data: donationPostsData, donationPostsError } = useSWR(
         selectedCharitablefoundation
-            ? `/admin/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=1&filter[city_id]=${selectedCity}`
-            : `/admin/donationPost/index?filter[post_type_id]=1&filter[city_id]=${selectedCity}`
+            ? `/user/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=1&filter[city_id]=${selectedCity}`
+            : `/user/donationPost/index?filter[post_type_id]=1&filter[city_id]=${selectedCity}`
     );
 
     useEffect(() => {

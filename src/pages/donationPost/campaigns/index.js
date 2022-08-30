@@ -21,8 +21,8 @@ const Campaigns = () => {
     //#region Hook   ####################################
     const { data: donationPostsData, donationPostsError } = useSWR(
         selectedCharitablefoundation
-            ? `/admin/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
-            : `/admin/donationPost/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
+            ? `/user/donationPost/charitablefoundation/${selectedCharitablefoundation}/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
+            : `/user/donationPost/index?filter[post_type_id]=3&filter[city_id]=${selectedCity}`
     );
 
     useEffect(() => {

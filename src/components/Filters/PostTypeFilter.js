@@ -6,7 +6,7 @@ const PostTypeFilter = ({ setSelectedPostType }) => {
     //#region Hook   ####################################
     const [postTypes, setPostTypes] = useState([]);
 
-    const { data: postTypesData, postTypesError } = useSWR('/admin/postType/index');
+    const { data: postTypesData, postTypesError } = useSWR('/user/postType/index');
 
     useEffect(() => {
         if (postTypesData) {

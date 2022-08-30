@@ -11,6 +11,7 @@ import Head from 'next/head';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import { SWRConfig } from 'swr';
+import { Toaster } from 'react-hot-toast'
 import axios from '@/lib/axios';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -40,6 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
             >
                 <Layout>
                     <Component {...pageProps} />
+                    <Toaster />
                 </Layout>
             </SWRConfig>
             <Script src='/assets/js/wow.min.js' strategy='beforeInteractive' />

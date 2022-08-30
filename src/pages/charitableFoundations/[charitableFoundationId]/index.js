@@ -28,10 +28,10 @@ const CharitableFoundation = () => {
     const { charitableFoundationId } = router.query;
 
     const { data: donationPostsData, donationPostsError } = useSWR(
-        `/admin/donationPost/charitablefoundation/${charitableFoundationId}/index?filter[post_type_id]=${selectedPostType}&filter[branch_id]=${selectedBranch}`
+        `/user/donationPost/charitablefoundation/${charitableFoundationId}/index?filter[post_type_id]=${selectedPostType}&filter[branch_id]=${selectedBranch}`
     );
     const { data: charitableFoundationData, charitableFoundationError } =
-        useSWR(`admin/charitablefoundation/${charitableFoundationId}/show`);
+        useSWR(`/user/charitablefoundation/${charitableFoundationId}/show`);
 
     useEffect(() => {
         setLoading(true);

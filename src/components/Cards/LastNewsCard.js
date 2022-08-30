@@ -16,7 +16,7 @@ const LastNewsCard = ({ selectedBranch }) => {
     const { charitableFoundationId } = router.query;
 
     const { data: newsData, newsError } = useSWR(
-        `/admin/news/charitablefoundation/${charitableFoundationId}/index?filter[branch_id]=${selectedBranch}`
+        `/user/news/charitablefoundation/${charitableFoundationId}/index?filter[branch_id]=${selectedBranch}`
     );
 
     useEffect(() => {

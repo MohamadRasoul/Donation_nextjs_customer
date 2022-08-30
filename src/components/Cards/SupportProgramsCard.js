@@ -16,7 +16,7 @@ const SupportProgramsCard = ({ selectedBranch }) => {
     const { charitableFoundationId } = router.query;
 
     const { data: supportProgramsData, supportProgramsError } = useSWR(
-        `/admin/supportProgram/charitablefoundation/${charitableFoundationId}/index?filter[branch_id]=${selectedBranch}`
+        `/user/supportProgram/charitablefoundation/${charitableFoundationId}/index?filter[branch_id]=${selectedBranch}`
     );
 
     useEffect(() => {
